@@ -403,8 +403,7 @@ gtkwave vcd/eco_core_tb.vcd
 3. **Integrated Branch Target Buffer (BTB)**
    - *Current limitation:* A taken branch costs 1 stall cycle due to Stage 2 resolution.
    - *Optimization:* Add a lightweight 16-entry direct-mapped BTB in Stage 1 (IF). This enables zero-cycle branch penalties for predictable loops, pushing practical code IPC closer to ~0.95.
-4. **Custom cryptographic & FHE acceleration extensions**
-   - The operand isolation framework provides an interface to support modular reduction accelerators ($x \bmod q$, Montgomery multiplication steps) and bit-permutation engines (Zbb / `grev`) alongside the popcount unit without adding dynamic power overhead on standard integer code.
+
 
 ---
 
